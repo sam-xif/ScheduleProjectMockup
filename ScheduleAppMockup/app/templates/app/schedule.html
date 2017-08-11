@@ -1,0 +1,90 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<div id="scheduleheader">
+    <h1>{{ schedule.student.student_name }} ({{schedule.student.student_nickname}})</h1>
+    <h3>Class of {{schedule.student.graduation_year }}</h3>
+    <p><a class="btn btn-primary btn-large" href="#">Class list</a></p>
+</div>
+<div id="schedulewrap">
+    <table id="schedule">
+        <thead>
+            <tr>
+                <td>Monday</td>
+                <td>Tuesday</td>
+                <td>Wednesday</td>
+                <td>Thursday</td>
+                <td>Friday</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="background-color:yellow">{% include "app/classtemplate.html" with c=class1 %}</td>
+                <td style="background-color:yellow">{% include "app/classtemplate.html" with c=class1 %}</td>
+                <td style="background-color:yellow">{% include "app/classtemplate.html" with c=class1 %}</td>
+                <td>Department Meetings</td>
+                <td style="background-color:yellow">{% include "app/classtemplate.html" with c=class1 %}</td>
+            </tr>
+            <tr>
+                <td style="background-color:lightgreen">{% include "app/classtemplate.html" with c=class2 %}</td>
+                <td style="background-color:lightgreen">{% include "app/classtemplate.html" with c=class2 %}</td>
+                <td style="background-color:yellow">{% include "app/classtemplate.html" with c=class1 %}</td>
+                <td style="background-color:#3399ff">{% include "app/classtemplate.html" with c=class3 %}</td>
+                <td style="background-color:lightgreen">{% include "app/classtemplate.html" with c=class2 %}</td>
+            </tr>
+            <tr>
+                <td>Conference</td>
+                <td>Conference</td>
+                <td style="background-color:lightgreen">{% include "app/classtemplate.html" with c=class2 %}</td>
+                <td style="background-color:#3399ff">{% include "app/classtemplate.html" with c=class3 %}</td>
+                <td>Advising</td>
+            </tr> 
+            <tr>
+                <td style="background-color:#3399ff">{% include "app/classtemplate.html" with c=class3 %}</td>
+                <td style="background-color:#3399ff">{% include "app/classtemplate.html" with c=class3 %}</td>
+                <td style="background-color:lightgreen">{% include "app/classtemplate.html" with c=class2 %}</td>
+                <td>Conference</td>
+                <td style="background-color:#3399ff">{% include "app/classtemplate.html" with c=class3 %}</td>
+            </tr>
+            <tr>
+                <td style="background-color:#9999ff">{% include "app/classtemplate.html" with c=class4 %}</td>
+                <td style="background-color:#9999ff">{% include "app/classtemplate.html" with c=class4 %}</td>
+                <td>All School<br /> Meeting</td>
+                <td style="background-color:#9999ff">{% include "app/classtemplate.html" with c=class4 %}</td>
+                <td style="background-color:#9999ff">{% include "app/classtemplate.html" with c=class4 %}</td>
+            </tr>
+            <tr>
+                <td style="background-color:#d9b3ff">{% include "app/classtemplate.html" with c=class5 %}</td>
+                <td style="background-color:#d9b3ff">{% include "app/classtemplate.html" with c=class5 %}</td>
+                <td style="background-color:#ff9933">{% include "app/classtemplate.html" with c=class7 %}</td>
+                <td style="background-color:#9999ff">{% include "app/classtemplate.html" with c=class4 %}</td>
+                <td style="background-color:#d9b3ff">{% include "app/classtemplate.html" with c=class5 %}</td>
+            </tr>
+            <tr>
+                <td style="background-color:#fa8072">{% include "app/classtemplate.html" with c=class6 %}</td>
+                <td style="background-color:#fa8072">{% include "app/classtemplate.html" with c=class6 %}</td>
+                <td style="background-color:#ff9933">{% include "app/classtemplate.html" with c=class7 %}</td>
+                <td style="background-color:#d9b3ff">{% include "app/classtemplate.html" with c=class5 %}</td>
+                <td style="background-color:#fa8072">{% include "app/classtemplate.html" with c=class6 %}</td>
+            </tr>
+            <tr>
+                <td style="background-color:#ff9933">{% include "app/classtemplate.html" with c=class7 %}</td>
+                <td style="background-color:#ff9933">{% include "app/classtemplate.html" with c=class7 %}</td>
+                <td rowspan="3">Athletics and<br />other extracurriculars</td>
+                <td style="background-color:#d9b3ff">{% include "app/classtemplate.html" with c=class5 %}</td>
+                <td style="background-color:#ff9933">{% include "app/classtemplate.html" with c=class7 %}</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Athletics and<br />other extracurriculars</td>
+                <td rowspan="2">Athletics and<br />other extracurriculars</td>
+                <td style="background-color:#fa8072">{% include "app/classtemplate.html" with c=class6 %}</td>
+                <td rowspan="2">Athletics and<br />other extracurriculars</td>
+            </tr>
+            <tr>
+                <td style="background-color:#fa8072">{% include "app/classtemplate.html" with c=class6 %}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
